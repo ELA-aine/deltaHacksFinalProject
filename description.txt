@@ -1,14 +1,37 @@
 ## Inspiration
-  
+  Every day in our lives, whether it is from social media or real life, we have seen many blind people who have a hard time in their lives, especially when they want to live individually. There are a lot of challenges they face daily. The project name is "EyeDentified", which is dedicated to helping blind people who need identification an object but have no one helping them. This can be some medicines, food, clothes, etc.
 
 ## What it does
 
+"F" : Open the camera
+"J" : Close the camera
+" " (space) : Take the picture
+Enter: Save the photos
+
+When the photos have been taken, Cohere AI would provide a general description of the picture, then the description would be read out loud. This would potentially help blind people with the ability to recognize the object.
+
+In addition, although blind people are not able to see the picture, there is a save button to save the picture. We want that blind people are able to make memories with their friends. 
+
 ## How we built it
+
+With the help of ChatGpt and Cohere AI, we are able to implement this application using HTML, CSS, and Javascript as front-end tools, and Python as back-end tools.
+
+We have also utilized Procreate to design the background for our application.
 
 ## Challenges we ran into
 
+In the beginning, we struggled in choosing the project topics, We all had different ideas and it was hard to choose an appropriate idea with both simplicity (something that can be done within 24 hours) and meaning (something that can actually help a group of people). As a result of the combination of our ideas, we came up with this web application that can help blind people.
+
+In the meantime, we encountered a struggle in fetching the local computer and back-end program, which took a long time to debug. We had tried different ideas many times, seeking help from people, and searching for similar issues and solutions. Finally, we can complete and run the program with all the functionalities working without any error.
+
 ## Accomplishments that we're proud of
+
+We have accomplished the web application as well as the back-end program, which is a brand new beginning for us since this is our first time attending Hackathon and being able to create a program in a short period.
 
 ## What we learned
 
+We have learned how to utilize Generative AI and API and connect to the web application to make the functionalities work. We have also learned how to connect from front-end to back-end using fetch and python. We have also learned further more about javascript and web development. Those are very previous experiences for us.
+
 ## What's next for EyeDentified
+
+If there is an opportunity, we would like to further develop this web application as a mobile application. Mobile applications would be more powerful and convenient for blind people to use, which is what we are dedicated to achieving. We hope that our ability and effort would one day help those blind people in their daily life.
