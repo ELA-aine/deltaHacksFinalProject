@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EyeDentified</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="Untitled_Artwork 5.png">
+</head>
+<body>
+  <h1>EyeDentified</h1>
+  <h3> Feel the Beautiful World with <span>Closed Eyes</span></h3>
+  <div class="controls">
+    <button id="openCamera">Open Camera</button>
+    <button id="closeCamera" disabled>Close Camera</button>
+    <button id="takePicture" disabled>Take Picture</button>
+    <button id="savePicture" disabled>Save Picture</button>
+  </div>
+
+  <!-- Video feed for live camera -->
+  <video id="camera" autoplay style="display: none"></video>
+
+  <!-- Canvas for displaying the frozen snapshot -->
+  <canvas id="snapshot" style="display: none"></canvas>
+
+  <!-- Control buttons -->
+   <div id="textBox">
+    <p id="description">Welcome to Our Project!!</p>
+   </div>
+  <h4>Developed in Deltahacks</h4>
+  <h4>Great Thanks to Cohere AI</h4>
+  <h4>Developer: Elaine Ge, Sylvia Niu, Claire Li</h4>
+  <script src="script.js"></script>
+</body>
+</html>

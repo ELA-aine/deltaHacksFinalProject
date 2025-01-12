@@ -1,0 +1,43 @@
+generateButton.addEventListener('click', async () => {
+  if (canvas.width === 0 || canvas.height === 0) {
+    alert('Please take a picture first.');
+    return;
+  }
+
+  generateButton.disabled = false;
+  descriptionElement.textContent = 'Generating description...';
+
+  try {
+    // Get the base64 image data from the canvas
+    const capturedImage = canvas.toDataURL('image/png');
+
+    // Send the image to the backend
+    const response = await fetch('http://127.0.0.1:5000/generate-description', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ image: capturedImage }),
+    });
+
+    // Handle the backend response
+    const data = await response.json();
+    if (data.error) {
+      descriptionElement.textContent = `Error: ${data.error}`;
+    } else {
+      descriptionElement.textContent = data.description; // Display the generated description
+      readAloudButton.disabled = false; // Enable the "Read Aloud" button
+      const utterance = new SpeechSynthesisUtterance(data.description);
+      window.speechSynthesis.speak(utterance);
+    }
+  } catch (error) {
+    descriptionElement.textContent = `Error: ${error.message}`;
+  }
+});
+
+#textBox {
+  background-color: white;
+  max-width: 50%;
+  align-items: center;
+  border: 1px;
+}
